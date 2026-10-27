@@ -1,5 +1,15 @@
 # Sequencer
 
+This is an unofficial fork of Sequencer 4.2.2 with a startup migration fix. Version 4.2.2.1 checks whether a token is linked before reading its Actor, avoiding synthetic Actor construction for excluded tokens. The module ID remains `sequencer`.
+
+Install manifest: https://github.com/webmaster94/FoundryVTT-Sequencer/releases/latest/download/module.json
+
+Upstream fix: [fantasycalendar/FoundryVTT-Sequencer#477](https://github.com/fantasycalendar/FoundryVTT-Sequencer/pull/477).
+
+Run `node --test tests/migrations.test.mjs` for the synthetic regression tests. Build with `npm ci` and `npm run build`. Fork manifest and release configuration changes are kept on `fork-release`; the upstream PR contains only the migration fix and tests.
+
+The upstream project documentation follows.
+
 ![Latest Release Download Count](https://img.shields.io/github/downloads/fantasycalendar/FoundryVTT-Sequencer/latest/module.zip?color=2b82fc&label=DOWNLOADS&style=for-the-badge) [![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fsequencer&colorB=006400&style=for-the-badge)](https://forge-vtt.com/bazaar#package=sequencer) ![Foundry Verified Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fgithub.com%2Ffantasycalendar%2FFoundryVTT-Sequencer%2Freleases%2Flatest%2Fdownload%2Fmodule.json&label=Foundry%20Verified%20Version&query=$.compatibility.verified&colorB=orange&style=for-the-badge) ![Latest Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fgithub.com%2Ffantasycalendar%2FFoundryVTT-Sequencer%2Freleases%2Flatest%2Fdownload%2Fmodule.json&label=Latest%20Release&prefix=v&query=$.version&colorB=red&style=for-the-badge)
 
 ![Animation showing the Sequencer](docs/images/Animation2.gif)

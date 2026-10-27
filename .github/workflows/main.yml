@@ -10,6 +10,7 @@ env:
 
 jobs:
   build:
+    if: github.repository == 'fantasycalendar/FoundryVTT-Sequencer'
     runs-on: ubuntu-latest
     steps:
       - name: Validate release body length
